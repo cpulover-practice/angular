@@ -25,7 +25,6 @@
 [[student-list.component.ts]()]
 8. Update template HTML page of the component to display sample data 
 [[student-list.component.html]()]
-   - Atrribute ```*ngFor``` loops through the array (used for ```<tr>```)
 
 ### Integrating Bootstrap
 1. Get links for remote Bootstrap files: required meta and link tags 
@@ -42,6 +41,11 @@
 - ```{{ }}``` reads the property of the related component in template
 - Modifier ```public``` is commonly used for properties in Angular -> no need for getter/setter accessor
 
+### @angular/common API
+ [[student-list.component.html]()]
+ - ```*ngFor="let <var> of <var_array>``` loops through the array (used for ```<tr>```) 
+ - ```*ngIf="<boolean expression>; else <else_block>"``` and ```<ng-template #<else_block>>``` displays the content based on boolean expression result
+- ```[ngClass]="{'<class>': <boolean expression>}">``` assigns the class to the element based on boolean expression result
 
 ### Angular CLI Commands
 - ```ng help```: list on commands with the infomation

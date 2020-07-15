@@ -1,25 +1,31 @@
-<div class="container"><h4>Student List - Bootstrap</h4>
+<div class="container">
+    <h4>Student List - Bootstrap</h4>
+<br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th> First name </th>
+                <th> Last name </th>
+                <th> Email </th>
+                <th> Age </th>
+                <th>Over 25?</th>
+            </tr>
+        </thead>
 
-<table class="table table-hover">
-    <thead class="thead-dark">
-        <tr>
-            <th> First name </th>
-            <th> Last name </th>
-            <th> Email </th>
-            <th> Age </th>
-        </tr>
-    </thead>
+        <tbody>
+            <tr *ngFor="let student of studentList" [ngClass]="{'highlight': student.age >= 25}">
+                <td>{{ student.firstName }}</td>
+                <td>{{ student.lastName }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.age }}</td>
+                <td>
+                    <div *ngIf="student.age>25; else elseBlock"> Yes</div>
+                    <ng-template #elseBlock>No</ng-template>
+                </td>
+            </tr>
 
-    <tbody>
-        <tr *ngFor="let student of studentList">
-            <td>{{ student.firstName }}</td>
-            <td>{{ student.lastName }}</td>
-            <td>{{ student.email }}</td>
-            <td>{{ student.age }}</td>
-        </tr>
-
-    </tbody>
+        </tbody>
 
 
-</table>
+    </table>
 </div>
