@@ -2,10 +2,10 @@
 
 ### Project Structure
 - ```src/app/app.module.ts```: main application module
-- ```src/app/app.component.html```: main template HTML page for placeholer content
+- ```src/app/app.component.html```: main template HTML page for content placeholder
 
 
-### Development Process
+### New Component
 1. Create new project by CLI
    - No routing
    - CSS style
@@ -18,7 +18,7 @@
    - ```<component_name>.component.css```: the component private CSS
    - ```<component_name>.component.spec.ts```: the unit test specifications
    - Automatically update main app module: include new Component into the module
-5. Add new component selector to app template page
+5. Add new component selector to app template page to include its template to the main app template (web page)
 6. Create new class (optional)
 [[student.ts]()]
 7. Create sample data in the Component 
@@ -26,6 +26,17 @@
 8. Update template HTML page of the component to display sample data 
 [[student-list.component.html]()]
    - Atrribute ```*ngFor``` loops through the array (used for ```<tr>```)
+
+### Integrating Bootstrap
+1. Get links for remote Bootstrap files: required meta and link tags 
+[[URL](https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template)]
+2. Add the reference links to 
+[index.html]()
+3. Apply Bootstrap style in the templates
+[[app.component.html]()] [[student-list-bootstrap.component.html]()]
+   - Wrap the content inside ```<div class="container">```
+4. Update new template URL for the Component if necessary (change template)
+[[student-list.component.ts]()]
 
 ### Notes
 - ```{{ }}``` reads the property of the related component in template
