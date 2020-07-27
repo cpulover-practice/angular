@@ -3,6 +3,10 @@
 ### Project Structure
 - ```src/app/app.module.ts```: main application module
 - ```src/app/app.component.html```: main template HTML page for content placeholder
+- ```src/assets``` used to store resources: images, JS, CSS, etc.
+- ```node_modules``` directory and ```package.json``` contain all the dependencies.
+- ```angular.json``` is the main configuration file of the project.
+- ```src/style.css``` is the global CSS style
 
 
 ### New Component
@@ -37,8 +41,8 @@
 4. Update new template URL for the Component if necessary (change template)
 [[student-list.component.ts]()]
 
-### Notes
-- ```{{ }}``` reads the property of the related component in template
+### Notes - Tips
+- ```{{ }}``` reads the property of the related component in template (string interpolation)
 - Modifier ```public``` is commonly used for properties in Angular -> no need for getter/setter accessor
 
 ### @angular/common API
